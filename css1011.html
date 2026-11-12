@@ -53,7 +53,7 @@
 
   <div class="box">
     <h3>Planning (3h15)</h3>
-    <p>Mise en place : 5 min · Page formulaire : 25 min · Formulaire : 20 min · Keyframes « entree » : 15 min · Keyframes « rebond » : 15 min · Pause : 10 min · Premier JS : 10 min · Variables : 15 min · Texte : 15 min · Clic : 20 min · Attention, envoi et champs vides : 35 min · Questions : 10 min · Marge : 0 min</p>
+    <p>Mise en place : 5 min · Page formulaire : 25 min · Formulaire : 20 min · Keyframes « entree » : 15 min · Keyframes « rebond » : 15 min · Pause : 10 min · Premier JS : 10 min · Variables : 15 min · Texte : 15 min · Clic (fenêtre) : 20 min · Champs vides et confirmation : 35 min · Questions : 10 min · Marge : 0 min</p>
   </div>
 
   <div class="box">
@@ -82,13 +82,13 @@
     <li><label><input type="checkbox" data-id="g2"><span class="texte">À la fin du formulaire, ajoute <code>&lt;button type="submit" class="bouton bouton-valider"&gt;Valider&lt;/button&gt;</code><span class="ok">✅ Le bouton Valider apparaît sous les champs.</span></span></label></li>
     <li><label><input type="checkbox" data-id="g3"><span class="texte">Dans <code>style.css</code>, ajoute temporairement <code>border: 2px solid red;</code> à <code>main</code> et à <code>.formulaire</code>, pour voir leurs zones<span class="ok">✅ Tu vois un cadre rouge autour de la page et un autre autour du formulaire.</span></span></label></li>
     <li><label><input type="checkbox" data-id="g4"><span class="texte">Sur <code>main</code>, ajoute <code>display: flex;</code>, <code>flex-direction: column;</code> et <code>align-items: center;</code>. Sur <code>.formulaire</code>, <code>width: 100%;</code> et <code>max-width: 480px;</code>. Supprime les bordures rouges<span class="ok">✅ Le formulaire est centré horizontalement sur la page.</span></span></label></li>
-    <li><label><input type="checkbox" data-id="g5"><span class="texte">Sur <code>.formulaire input, .formulaire textarea</code>, ajoute <code>width: 100%;</code> et <code>box-sizing: border-box;</code><span class="ok">✅ Les quatre champs ont exactement la même largeur.</span></span></label></li>
+    <li><label><input type="checkbox" data-id="g5"><span class="texte">Sur <code>.formulaire input, .formulaire textarea</code>, ajoute <code>width: 100%;</code> et <code>box-sizing: border-box;</code><span class="ok">✅ Les cinq champs ont exactement la même largeur.</span></span></label></li>
   </ul>
 
   <h2>Étape 4 : keyframes « entree » (15 min)</h2>
   <ul class="todo">
     <li><label><input type="checkbox" data-id="k1"><span class="texte">Dans <code>style.css</code>, écris <code>@keyframes entree { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }</code><span class="ok">✅ Pas de changement visible encore : c'est normal.</span></span></label></li>
-    <li><label><input type="checkbox" data-id="k2"><span class="texte">Dans <code>@media (prefers-reduced-motion: no-preference)</code>, écris <code>.formulaire { animation: entree 0.6s ease-out both; }</code><span class="ok">✅ Le formulaire apparaît en fondu au chargement (F5 sur la page formulaire).</span></span></label></li>
+    <li><label><input type="checkbox" data-id="k2"><span class="texte">Dans <code>@media (prefers-reduced-motion: no-preference)</code>, écris <code>.formulaire { animation: entree 0.6s ease-out both; }</code><span class="ok">✅ Le formulaire apparaît en fondu au chargement (rafraîchis la page avec F5).</span></span></label></li>
   </ul>
 
   <h2>Étape 5 : keyframes « rebond » (15 min)</h2>
@@ -102,31 +102,33 @@
   <h2>Étape 6 : premier fichier JavaScript (10 min)</h2>
   <ul class="todo">
     <li><label><input type="checkbox" data-id="j1"><span class="texte">Crée <code>script.js</code> dans <code>cssflex</code>, à côté de <code>index.html</code><span class="ok">✅ Le fichier apparaît dans la liste de VS Code, à côté de <code>index.html</code>.</span></span></label></li>
-    <li><label><input type="checkbox" data-id="j2"><span class="texte">Dans <code>index.html</code>, ajoute <code>&lt;script src="script.js"&gt;&lt;/script&gt;</code> juste avant <code>&lt;/body&gt;</code><span class="ok">✅ La ligne est bien en bas de la page, après le footer.</span></span></label></li>
+    <li><label><input type="checkbox" data-id="j2"><span class="texte">Dans <code>index.html</code> et dans <code>formulaire.html</code>, ajoute <code>&lt;script src="script.js"&gt;&lt;/script&gt;</code> juste avant <code>&lt;/body&gt;</code><span class="ok">✅ La ligne est bien en bas de la page, après le footer.</span></span></label></li>
     <li><label><input type="checkbox" data-id="j3"><span class="texte">Dans <code>script.js</code>, écris <code>console.log("Bonjour le Jardin !");</code>, puis ouvre la console (F12)<span class="ok">✅ Le message s'affiche dans la console.</span></span></label></li>
   </ul>
 
   <h2>Étape 7 : variables et sélecteurs (15 min)</h2>
   <ul class="todo">
     <li><label><input type="checkbox" data-id="x1"><span class="texte">Déclare une constante <code>const nom = "Le Jardin des Sources";</code> et affiche-la avec <code>console.log(nom);</code><span class="ok">✅ Le nom s'affiche dans la console.</span></span></label></li>
-    <li><label><input type="checkbox" data-id="x2"><span class="texte">Écris <code>const titreHero = document.querySelector(".hero h2");</code> puis <code>console.log(titreHero);</code><span class="ok">✅ La console affiche le titre de la page.</span></span></label></li>
+    <li><label><input type="checkbox" data-id="x2"><span class="texte">Écris <code>const titreHero = document.querySelector(".hero h2");</code> puis <code>console.log(titreHero);</code><span class="ok">✅ Sur l'accueil, la console affiche le titre. Sur le formulaire, elle affiche <code>null</code> : c'est normal.</span></span></label></li>
   </ul>
 
   <h2>Étape 8 : changer le texte (15 min)</h2>
   <ul class="todo">
-    <li><label><input type="checkbox" data-id="e1"><span class="texte">Écris <code>titreHero.textContent = "Bienvenue au Jardin !";</code><span class="ok">✅ Le titre de la page a changé après rechargement.</span></span></label></li>
+    <li><label><input type="checkbox" data-id="e1"><span class="texte">Écris <code>if (titreHero) { titreHero.textContent = "Bienvenue au Jardin !"; }</code><span class="ok">✅ Le titre de l'accueil a changé après rechargement (Ctrl+F5).</span></span></label></li>
   </ul>
 
-  <h2>Étape 9 : réagir au clic (20 min)</h2>
+  <h2>Étape 9 : la fenêtre de confirmation (20 min)</h2>
   <ul class="todo">
-    <li><label><input type="checkbox" data-id="c1"><span class="texte">Écris <code>const boutonHero = document.querySelector(".hero .bouton");</code> (pas <code>.bouton</code> seul : sur le formulaire, il désignerait le bouton Valider), puis <code>bouton.addEventListener("click", function () { bouton.textContent = "Merci !"; });</code><span class="ok">✅ Un clic sur « Réserver une table » change le texte du bouton.</span></span></label></li>
+    <li><label><input type="checkbox" data-id="c1"><span class="texte">Dans <code>formulaire.html</code>, juste avant <code>&lt;footer&gt;</code>, ajoute <code>&lt;dialog id="confirmation"&gt;</code> avec un <code>h2</code> « Réservation confirmée », un <code>p</code> de remerciement, et un bouton <code>id="fermer"</code> « Fermer »<span class="ok">✅ La balise existe dans le HTML. Elle n'est pas visible tant qu'on ne l'ouvre pas.</span></span></label></li>
+    <li><label><input type="checkbox" data-id="c2"><span class="texte">Dans <code>script.js</code>, sous la partie accueil, écris <code>const formulaire = document.querySelector(".formulaire");</code>, puis <code>formulaire.addEventListener("submit", function (e) { e.preventDefault(); });</code><span class="ok">✅ Au clic sur Valider, la page ne se recharge plus.</span></span></label></li>
   </ul>
 
-  <h2>Étape 10 : attention, envoi et champs vides (35 min)</h2>
+  <h2>Étape 10 : champs vides et confirmation (35 min)</h2>
   <ul class="todo">
-    <li><label><input type="checkbox" data-id="a1"><span class="texte">Dans <code>style.css</code>, écris <code>@keyframes attirer</code> (un halo orange qui grandit et disparaît), puis <code>.bouton-valider.attire { animation: attirer 1s ease-in-out infinite; }</code><span class="ok">✅ Pas de changement visible tant que la classe <code>attire</code> n'est pas ajoutée par le JavaScript. Si la souris est sur le bouton, c'est le rebond qui joue : c'est normal, car le survol est prioritaire.</span></span></label></li>
-    <li><label><input type="checkbox" data-id="a2"><span class="texte">Dans <code>script.js</code>, récupère <code>form</code>, <code>bouton</code> et tous les champs : <code>form.querySelectorAll("input, textarea")</code>. Pour chaque champ, à l'événement <code>input</code>, ajoute la classe <code>attire</code> au bouton quand tous les champs sont remplis : <code>bouton.classList.toggle("attire", tousRemplis)</code><span class="ok">✅ Quand les quatre champs sont remplis, le bouton Valider attire l'attention.</span></span></label></li>
-    <li><label><input type="checkbox" data-id="a3"><span class="texte">Ajoute <code>required</code> à chaque champ, et <code>novalidate</code> à la balise <code>form</code> (sinon le navigateur bloque l'envoi avant ton JavaScript). Dans <code>script.js</code>, écoute le <code>submit</code> du formulaire, appelle <code>e.preventDefault()</code>, puis : si un champ est vide, ajoute-lui la classe <code>erreur</code> (et écris le CSS <code>@keyframes secousse</code>) ; sinon ajoute la classe <code>envoye</code> au bouton (et écris <code>@keyframes envoi</code>)<span class="ok">✅ Avec un champ vide, il secoue. Avec tout rempli, le bouton fait son animation d'envoi.</span></span></label></li>
+    <li><label><input type="checkbox" data-id="a1"><span class="texte">Ajoute <code>novalidate</code> à la balise <code>form</code>, et <code>required</code> à chaque champ. Sans <code>novalidate</code>, le navigateur bloque l'envoi avant ton JavaScript<span class="ok">✅ Le clic sur Valider n'affiche pas la bulle d'erreur du navigateur.</span></span></label></li>
+    <li><label><input type="checkbox" data-id="a2"><span class="texte">Dans le gestionnaire <code>submit</code>, parcours les champs : si un champ est vide (<code>champ.value.trim() === ""</code>), ajoute-lui la classe <code>erreur</code>. Sinon, ouvre la fenêtre avec <code>document.getElementById("confirmation").showModal();</code><span class="ok">✅ Un champ vide devient rouge ; avec les cinq champs remplis, la fenêtre s'ouvre.</span></span></label></li>
+    <li><label><input type="checkbox" data-id="a3"><span class="texte">Dans <code>script.js</code>, ajoute le bouton Fermer : <code>document.getElementById("fermer").addEventListener("click", function () { document.getElementById("confirmation").close(); });</code><span class="ok">✅ Le bouton Fermer ferme la fenêtre.</span></span></label></li>
+    <li><label><input type="checkbox" data-id="a4"><span class="texte">Dans <code>style.css</code>, écris <code>.formulaire .erreur { border-color: #cf222e; }</code>, puis un <code>.modal</code> avec un fond blanc, un <code>padding</code> et un <code>border-radius</code><span class="ok">✅ Le champ vide a une bordure rouge, et la fenêtre a un fond blanc.</span></span></label></li>
   </ul>
 
   <div class="actions">
@@ -135,9 +137,10 @@
 
   <div class="box">
     <h3>En cas de blocage</h3>
-    <p><strong>Rien ne se passe dans la console :</strong> vérifie la ligne <code>&lt;script src="script.js"&gt;&lt;/script&gt;</code> et le nom exact du fichier.</p>
-    <p><strong>« Cannot read properties of null » :</strong> le sélecteur ne trouve rien. Vérifie le point devant la classe (<code>.bouton</code>).</p>
-    <p><strong>Le texte ne change pas :</strong> vérifie que tu as bien sauvegardé (Ctrl+S) et rechargé la page (F5).</p>
+    <p><strong>Le formulaire n'a pas d'animation :</strong> vérifie que <code>.formulaire</code> est bien dans la media query, et que la page est rechargée (F5).</p>
+    <p><strong>Rien ne se passe au clic sur Valider :</strong> vérifie que <code>script.js</code> est chargé sur la page formulaire, et que <code>novalidate</code> est présent. Regarde aussi la console (F12).</p>
+    <p><strong>« Cannot read properties of null » :</strong> un élément n'existe pas, ou son id est mal écrit. Vérifie <code>confirmation</code> et <code>fermer</code> dans le HTML.</p>
+    <p><strong>Un lien ne marche pas :</strong> vérifie l'orthographe exacte du nom de fichier : <code>formulaire.html</code>, sans majuscule.</p>
     <p><strong>Une accolade ou une parenthèse manque :</strong> chaque <code>(</code> doit avoir son <code>)</code>, et chaque <code>{</code> son <code>}</code>.</p>
   </div>
 
